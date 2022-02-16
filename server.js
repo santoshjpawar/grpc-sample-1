@@ -11,7 +11,7 @@ server.addService(todoPackage.Todo.service,
         createTodo: createTodo,
         readTodos: readTodos
     });
-server.bindAsync('0.0.0.0:50051', grpc.ServerCredentials.createInsecure(), () => {
+server.bindAsync('0.0.0.0:40000', grpc.ServerCredentials.createInsecure(), () => {
     server.start();
     console.log('grpc server started');  
 });

@@ -4,7 +4,7 @@ const packageDef = protoLoader.loadSync("C:\\cygwin64\\home\\C-RGT0897\\gRPC\\gr
 const grpcObject = grpc.loadPackageDefinition(packageDef);
 const todoPackage = grpcObject.todoPackage;
 
-const client = new todoPackage.Todo("localhost:50051", grpc.credentials.createInsecure());
+const client = new todoPackage.Todo("localhost:40000", grpc.credentials.createInsecure());
 
 client.createTodo({
     "id": 10,
